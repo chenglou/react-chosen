@@ -1,7 +1,7 @@
 {
   "name": "react-chosen",
-  "version": "0.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "react-chosen.js",
   "ignore": [
     "**/.*",
     "node_modules",
