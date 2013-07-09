@@ -18,7 +18,7 @@ Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty 
 
 - Every Chosen option employs camelCase, e.g. disable_search_threshold -> disableSearchThreshold.
 - Bonus little wrapper for `selectNode.trigger("liszt:updated")` -> `chosenComponent.update();`.
-- This README is longer than the code, go check out the source code.
+- This README is longer than the source code, go check it out.
 
 **Example**
 
