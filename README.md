@@ -35,3 +35,7 @@ Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty 
   , document.body);
 </script>
 ```
+
+**License**
+
+MIT.

@@ -1,6 +1,8 @@
 {
   "name": "react-chosen",
   "version": "0.0.1",
+  "author": "chenglou <chenglou92@gmail.com>",
+  "description": "React wrapper for Chosen jQuery.",
   "main": "react-chosen.js",
   "ignore": [
     "**/.*",
@@ -10,9 +12,19 @@
     "test",
     "tests"
   ],
+  "keywords": [
+    "facebook",
+    "react",
+    "chosen",
+    "harvest",
+    "select",
+    "dropdown",
+    "wrapper"
+  ],
   "dependencies": {
     "chosen": "~0.11.1",
     "jquery": "~2.0.3",
     "react": "~0.3.3"
-  }
+  },
+  "license": "MIT"
 }
