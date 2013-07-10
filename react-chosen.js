@@ -1,9 +1,12 @@
-/**
-* @jsx React.DOM
-*/
-var Chosen = React.createClass({displayName: 'Chosen',
+var Chosen = React.createClass({
+  displayName: 'Chosen',
+  componentDidUpdate: function() {
+    // chosen doesn't refresh the options by itself, babysit it
+    $(this.getDOMNode()).val(this.props.value).trigger('liszt:updated');
+  },
   componentDidMount: function(select) {
     $(select)
+      .val(this.props.value)
       .chosen({
         disable_search_threshold: this.props.disableSearchThreshold,
         no_results_text: this.props.noResultText,
@@ -19,8 +22,5 @@ var Chosen = React.createClass({displayName: 'Chosen',
   },
   render: function() {
     return this.transferPropsTo(React.DOM.select(null, this.props.children));
-  },
-  update: React.autoBind(function() {
-    $(this.getDOMNode()).trigger('liszt:updated'); // just a handy wrapper
-  })
+  }
 });

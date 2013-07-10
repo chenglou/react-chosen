@@ -17,7 +17,7 @@ Or simply drop the script somewhere on your page (after React and Chosen of cour
 Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty much the same, except:
 
 - Every Chosen option employs camelCase, e.g. disable_search_threshold -> disableSearchThreshold.
-- Bonus little wrapper for `selectNode.trigger("liszt:updated")` -> `chosenComponent.update();`.
+- **Bonus!** No need to trigger the random `.trigger("liszt:updated")` for syncing Chosen with the default select. Just pass a `value` property to the component and it'll sync after every component update. If you creep up and change the select value under the hood using jQuery, you'll still have to manually do `mySelect.val(myValue).trigger("liszt:updated")`.
 - This README is longer than the source code, go check it out.
 
 **Example**
@@ -28,7 +28,7 @@ Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty 
   * @jsx React.DOM
   */
   React.renderComponent(
-    <Chosen noResultText="No result" onChange={doSomething}>
+    <Chosen noResultText="No result" value="Harvest" onChange={doSomething}>
       <option value="Facebook">Facebook</option>
       <option value="Harvest">Harvest</option>
     </Chosen>
