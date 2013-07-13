@@ -1,3 +1,5 @@
+# React-chosen
+
 [React](http://facebook.github.io/react/) wrapper for [Chosen](http://harvesthq.github.io/chosen/) jQuery
 
 **install**
