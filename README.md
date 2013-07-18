@@ -2,7 +2,7 @@
 
 [React](http://facebook.github.io/react/) wrapper for [Chosen](http://harvesthq.github.io/chosen/) jQuery.
 
-**install**
+## install
 
 ```sh
 bower install react-chosen
@@ -14,7 +14,7 @@ Or simply drop the script somewhere on your page (after React and Chosen of cour
 <script src="path/to/react-chosen.js"></script>
 ```
 
-**API**
+## API
 
 Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty much the same, except:
 
@@ -24,30 +24,29 @@ Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty 
 
 - This README is longer than the source code, go check it out.
 
-**Example**
+## Example
 
-```
-<script type="text/jsx">
-  /**
-  * @jsx React.DOM
-  */
-  React.renderComponent(
-    <Chosen noResultsText="No result" value="Harvest" onChange={doSomething}>
-      <option value="Facebook">Facebook</option>
-      <option value="Harvest">Harvest</option>
-    </Chosen>
-  , document.body);
-  // or multi-select
-  React.renderComponent(
-    <Chosen value={["Apple"]} width="92px" data-placeholder="Select..." multiple>
-      <option value="Apple">Apple</option>
-      <option value="Facebook">Facebook</option>
-      <option value="Harvest">Harvest</option>
-    </Chosen>
-  , document.body);
-</script>
+```html
+/**
+* @jsx React.DOM
+*/
+React.renderComponent(
+  <Chosen noResultsText="No result" value="Harvest" onChange={doSomething}>
+    <option value="Facebook">Facebook</option>
+    <option value="Harvest">Harvest</option>
+  </Chosen>
+, document.body);
+
+// or multi-select
+React.renderComponent(
+  <Chosen value={["Apple"]} width="92px" data-placeholder="Select..." multiple>
+    <option value="Apple">Apple</option>
+    <option value="Facebook">Facebook</option>
+    <option value="Harvest">Harvest</option>
+  </Chosen>
+, document.body);
 ```
 
-**License**
+## License
 
 MIT.
