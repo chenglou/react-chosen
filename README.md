@@ -1,36 +1,30 @@
-# React-treeview
+# React-chosen
 
-Easy, light, flexible tree view made with [React](http://facebook.github.io/react/).
+[React](http://facebook.github.io/react/) wrapper for [Chosen](http://harvesthq.github.io/chosen/) jQuery.
 
-## install
+**install**
 
 ```sh
-bower install react-treeview
+bower install react-chosen
 ```
 
-Or simply drop the script somewhere on your page (after React of course):
+Or simply drop the script somewhere on your page (after React and Chosen of course):
 
 ```html
-<script src="path/to/react-treeview.js"></script>
+<script src="path/to/react-chosen.js"></script>
 ```
 
-## API
+**API**
 
-(This README uses the [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html) syntax. If you prefer the JavaScript version, try the [JSX Compiler](http://facebook.github.io/react/jsx-compiler.html) any time.)
+Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty much the same, except:
 
-### &lt;TreeView />
-The tag for declaring the tree view. A self-closing tag.
+- Every Chosen option employs camelCase, e.g. disable_search_threshold -> disableSearchThreshold.
 
-#### source
-The only attribute. It takes an array with the following format:
+- **Bonus!** No need to trigger the random `.trigger("liszt:updated")` for syncing Chosen with the native select. Just pass a `value` property to the component like you would normally do on a React select component. If you creep up and change the select value under the hood using jQuery, you'll still have to manually do `mySelect.trigger("liszt:updated")`.
 
-```js
-[
+- This README is longer than the source code, go check it out.
 
-];
-```
-
-## Example
+**Example**
 
 ```
 <script type="text/jsx">
@@ -38,7 +32,15 @@ The only attribute. It takes an array with the following format:
   * @jsx React.DOM
   */
   React.renderComponent(
-    <Chosen noResultText="No result" value="Harvest" onChange={doSomething}>
+    <Chosen noResultsText="No result" value="Harvest" onChange={doSomething}>
+      <option value="Facebook">Facebook</option>
+      <option value="Harvest">Harvest</option>
+    </Chosen>
+  , document.body);
+  // or multi-select
+  React.renderComponent(
+    <Chosen value={["Apple"]} width="92px" data-placeholder="Select..." multiple>
+      <option value="Apple">Apple</option>
       <option value="Facebook">Facebook</option>
       <option value="Harvest">Harvest</option>
     </Chosen>
@@ -46,8 +48,6 @@ The only attribute. It takes an array with the following format:
 </script>
 ```
 
-Check out the [examples](https://github.com/chenglou/react-treeview/tree/master/examples) folder for more sophisticated demos!
-
-## License
+**License**
 
 MIT.
