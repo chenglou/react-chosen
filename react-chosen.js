@@ -5,7 +5,7 @@ var Chosen = React.createClass({
     $(this.getDOMNode()).trigger('liszt:updated');
   },
   componentDidMount: function() {
-    var select = $(this.getDOMNode()).find("select");
+    var select = $(this.refs.select.getDOMNode());
     $(select)
       .chosen({
         disable_search_threshold: this.props.disableSearchThreshold,
@@ -21,6 +21,6 @@ var Chosen = React.createClass({
     $(this.getDOMNode()).off('liszt:maxselected change');
   },
   render: function() {
-    return React.DOM.div(null,this.transferPropsTo(React.DOM.select(null, this.props.children)));
+    return React.DOM.div(null,this.transferPropsTo(React.DOM.select({ref: "select"}, this.props.children)));
   }
 });
