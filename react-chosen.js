@@ -4,8 +4,8 @@ var Chosen = React.createClass({
     // chosen doesn't refresh the options by itself, babysit it
     $(this.getDOMNode()).trigger('liszt:updated');
   },
-  componentDidMount: function(div) {
-    var select = $(div).find("select");
+  componentDidMount: function() {
+    var select = $(this.getDOMNode()).find("select");
     $(select)
       .chosen({
         disable_search_threshold: this.props.disableSearchThreshold,
