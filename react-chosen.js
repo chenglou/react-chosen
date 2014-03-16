@@ -4,7 +4,8 @@ var Chosen = React.createClass({
     // chosen doesn't refresh the options by itself, babysit it
     $(this.getDOMNode()).trigger('liszt:updated');
   },
-  componentDidMount: function(select) {
+  componentDidMount: function() {
+    var select = $(this.refs.select.getDOMNode());
     $(select)
       .chosen({
         disable_search_threshold: this.props.disableSearchThreshold,
@@ -20,6 +21,6 @@ var Chosen = React.createClass({
     $(this.getDOMNode()).off('liszt:maxselected change');
   },
   render: function() {
-    return this.transferPropsTo(React.DOM.select(null, this.props.children));
+    return React.DOM.div(null,this.transferPropsTo(React.DOM.select({ref: "select"}, this.props.children)));
   }
 });
