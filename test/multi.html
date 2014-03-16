@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../bower_components/chosen/public/chosen.css">
+</head>
+<body>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/chosen/public/chosen.jquery.js"></script>
+  <script src="../bower_components/react/react.js"></script>
+  <script src="../bower_components/react/JSXTransformer.js"></script>
+  <script src="../react-chosen.js"></script>
+
+  <script type="text/jsx">
+    /** @jsx React.DOM */
+
+    var App = React.createClass({
+      render: function() {
+        return (
+          <Chosen
+            defaultValue={["Apple"]}
+            data-placeholder="Select..."
+            width={'100px'}
+            multiple>
+            <option value="Apple">Apple</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Harvest">Harvest</option>
+          </Chosen>
+        );
+      }
+    });
+
+    React.renderComponent(<App />, document.body);
+  </script>
+</body>
+</html>

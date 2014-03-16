@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../bower_components/chosen/public/chosen.css">
+</head>
+<body>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/chosen/public/chosen.jquery.js"></script>
+  <script src="../bower_components/react/react.js"></script>
+  <script src="../bower_components/react/JSXTransformer.js"></script>
+  <script src="../react-chosen.js"></script>
+
+  <script type="text/jsx">
+    /** @jsx React.DOM */
+
+    var App = React.createClass({
+      getInitialState: function() {
+        return {
+          changeCount: 0,
+          initValues: ['Harvest']
+        }
+      },
+
+      componentDidMount: function() {
+        this.setState({
+          initValues: ['Apple']
+        });
+      },
+
+      handleChange: function(e,b,c) {
+        console.log(e,b,c);
+        console.log(this.state.initValues);
+        this.setState({
+          changeCount: this.state.changeCount + 1
+        });
+      },
+
+      render: function() {
+        // should not change! Value controlled. But change event should fire
+        return (
+          <div>
+            <Chosen
+              value={this.state.initValues}
+              data-placeholder="Select..."
+              onChange={this.handleChange}
+              width={'100px'}
+              multiple>
+              <option value="Apple">Apple</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Harvest">Harvest</option>
+            </Chosen>
+            change triggered: {this.state.changeCount}
+          </div>
+        );
+      }
+    });
+
+    React.renderComponent(<App />, document.body);
+  </script>
+</body>
+</html>

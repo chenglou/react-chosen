@@ -1,0 +1,22 @@
+[
+  {
+    "name": "single",
+    "screenSize": [150, 200],
+    "url": "http://localhost:8000/test/single.html"
+  },
+  {
+    "name": "single controlled",
+    "screenSize": [150, 200],
+    "url": "http://localhost:8000/test/single_controlled.html"
+  },
+  {
+    "name": "change listening",
+    "screenSize": [150, 200],
+    "url": "http://localhost:8000/test/change.html"
+  },
+  {
+    "name": "multi",
+    "screenSize": [150, 200],
+    "url": "http://localhost:8000/test/multi.html"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "action": "screenshot"
+  },
+  {
+    "action": "click",
+    "y": 44,
+    "x": 82
+  },
+  {
+    "action": "click",
+    "y": 123,
+    "x": 78
+  },
+  {
+    "action": "screenshot"
+  },
+  {
+    "action": "click",
+    "y": 20,
+    "x": 63
+  },
+  {
+    "action": "screenshot"
+  }
+]

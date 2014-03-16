@@ -20,9 +20,7 @@ Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty 
 
 - Every Chosen option employs camelCase, e.g. disable_search_threshold -> disableSearchThreshold.
 
-- **Bonus!** No need to trigger the random `.trigger("liszt:updated")` for syncing Chosen with the native select. Just pass a `value` property to the component like you would normally do on a React select component. If you creep up and change the select value under the hood using jQuery, you'll still have to manually do `mySelect.trigger("liszt:updated")`.
-
-- This README is longer than the source code, go check it out.
+- Just like React's [controlled component](http://facebook.github.io/react/docs/forms.html#controlled-components), `value` controls your select and makes it immune to changes unless you specify so.
 
 ## Example
 
@@ -39,7 +37,7 @@ React.renderComponent(
 
 // or multi-select
 React.renderComponent(
-  <Chosen value={["Apple"]} width="92px" data-placeholder="Select..." multiple>
+  <Chosen defaultValue={["Apple"]} width="92px" data-placeholder="Select..." multiple>
     <option value="Apple">Apple</option>
     <option value="Facebook">Facebook</option>
     <option value="Harvest">Harvest</option>
