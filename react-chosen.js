@@ -1,7 +1,4 @@
-var Chosen;
-
-(function() {
-  Chosen = React.createClass({
+var Chosen = React.createClass({
     displayName: 'Chosen',
 
     componentDidUpdate: function() {
@@ -50,4 +47,5 @@ var Chosen;
       );
     }
   });
-})();
+
+module.exports = Chosen;
