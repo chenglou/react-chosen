@@ -14,6 +14,14 @@ Or simply drop the script somewhere on your page (after React and Chosen of cour
 <script src="path/to/react-chosen.js"></script>
 ```
 
+The npm build works, but unfortunately not well:
+
+```sh
+npm install react-chosen
+```
+
+Due to the awkwardness of Chosen and jQuery on npm, you'll still have to include jQuery as a global dependency. Installing via npm is not recommended.
+
 ## API
 
 Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty much the same, except:
@@ -25,9 +33,7 @@ Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty 
 ## Example
 
 ```html
-/**
-* @jsx React.DOM
-*/
+/** @jsx React.DOM */
 React.renderComponent(
   <Chosen noResultsText="No result" value="Harvest" onChange={doSomething}>
     <option value="Facebook">Facebook</option>

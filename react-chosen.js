@@ -1,7 +1,5 @@
-var Chosen;
-
-(function() {
-  Chosen = React.createClass({
+(function(window, React, $) {
+  var Chosen = React.createClass({
     displayName: 'Chosen',
 
     componentDidUpdate: function() {
@@ -50,4 +48,21 @@ var Chosen;
       );
     }
   });
-})();
+
+  if (typeof module === 'undefined') {
+      window.Chosen = Chosen;
+    } else {
+      // If we're dropping plain script tag, then we can assume Chosen and
+      // jQuery are already loaded. For browserify, however, we need to
+      // `require` the chosen npm module, which has the side-effect of attaching
+      // chosen onto jQuery. Note that due to the nature of the third-party
+      // chosen npm shim, we still need to manually include jQuery at the top
+      // level.
+      require('drmonty-chosen');
+      module.exports = Chosen;
+    }
+})(
+  window,
+  typeof require === 'function' ? require('React') : React,
+  jQuery
+);
