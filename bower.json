@@ -1,6 +1,6 @@
 {
   "name": "react-chosen",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "chenglou <chenglou92@gmail.com>",
   "description": "React wrapper for Chosen jQuery.",
   "main": "react-chosen.js",
@@ -9,8 +9,7 @@
     "node_modules",
     "components",
     "bower_components",
-    "test",
-    "tests"
+    "test"
   ],
   "keywords": [
     "facebook",
