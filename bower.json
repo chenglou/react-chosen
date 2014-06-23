@@ -1,6 +1,6 @@
 {
   "name": "react-chosen",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "author": "chenglou <chenglou92@gmail.com>",
   "description": "React wrapper for Chosen jQuery.",
   "main": "react-chosen.js",
