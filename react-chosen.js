@@ -63,6 +63,6 @@
     }
 })(
   window,
-  typeof require === 'function' ? require('React') : React,
+  typeof require === 'function' ? require('react') : React,
   jQuery
 );
