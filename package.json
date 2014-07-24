@@ -1,6 +1,6 @@
 {
   "name": "react-chosen",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "React wrapper for Chosen jQuery.",
   "main": "react-chosen.js",
   "ignore": [
@@ -33,6 +33,6 @@
     "drmonty-chosen": "^1.1.0",
     "envify": "^1.2.1",
     "jquery": "^2.1.1",
-    "react": "^0.10.0"
+    "react": "^0.11.0"
   }
 }
