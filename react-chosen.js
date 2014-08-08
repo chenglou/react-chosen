@@ -3,8 +3,15 @@
     displayName: 'Chosen',
 
     componentDidUpdate: function() {
+      var select = $(this.refs.select.getDOMNode());
+
+      // chosen doesn't clear the value attribute if this.props.value is set to null
+      if (!this.props.value) {
+        select.val('');
+      }
+
       // chosen doesn't refresh the options by itself, babysit it
-      $(this.refs.select.getDOMNode()).trigger('chosen:updated');
+      select.trigger('chosen:updated');
     },
 
     handleChange: function(a, b, c) {
