@@ -44,7 +44,7 @@
 
     render: function() {
       return React.DOM.div(null,
-        this.transferPropsTo(React.DOM.select({ref: "select"}, this.props.children))
+        React.DOM.select(Object.assign({}, this.props, {ref: "select"}), this.props.children)
       );
     }
   });
