@@ -33,6 +33,6 @@
     "drmonty-chosen": "^1.1.0",
     "envify": "^1.2.1",
     "jquery": "^2.1.1",
-    "react": "^0.11.2"
+    "react": "^0.12.1"
   }
 }
