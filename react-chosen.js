@@ -43,8 +43,9 @@
     },
 
     render: function() {
-      return React.DOM.div(null,
-        this.transferPropsTo(React.DOM.select({ref: "select"}, this.props.children))
+      var selectProps = $.extend(this.props, {ref: "select"});
+      return React.createElement("div", null,
+        React.createElement("select", selectProps, this.props.children)
       );
     }
   });
