@@ -43,7 +43,7 @@
     },
 
     render: function() {
-      var selectProps = $.extend(this.props, {ref: "select"});
+      var selectProps = $.extend({}, this.props, {ref: "select"});
       return React.createElement("div", null,
         React.createElement("select", selectProps, this.props.children)
       );
