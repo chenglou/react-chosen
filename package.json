@@ -1,6 +1,6 @@
 {
   "name": "react-chosen",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "React wrapper for Chosen jQuery.",
   "main": "react-chosen.js",
   "ignore": [
@@ -33,5 +33,9 @@
     "drmonty-chosen": "^1.1.0",
     "jquery": "^2.1.1",
     "react": "^0.12.1"
+  },
+  "devDependencies": {
+    "browserify": "^6.3.3",
+    "reactify": "^0.17.1"
   }
 }
