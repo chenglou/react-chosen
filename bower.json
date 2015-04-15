@@ -21,7 +21,7 @@
     "wrapper"
   ],
   "dependencies": {
-    "chosen": "~1.4.2",
+    "chosen": "1.4.2",
     "jquery": "~2.1.0",
     "react": "~0.12.1"
   },
