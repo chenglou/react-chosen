@@ -1,6 +1,6 @@
 {
   "name": "react-chosen",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "React wrapper for Chosen jQuery.",
   "main": "react-chosen.js",
   "ignore": [
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/karrde00/react-chosen",
   "dependencies": {
-    "drmonty-chosen": "1.4.2",
+    "drmonty-chosen": "~1.4.2",
     "jquery": "^2.1.1",
     "react": "^0.13.0"
   }
