@@ -23,7 +23,7 @@
   "dependencies": {
     "chosen": "1.4.2",
     "jquery": "~2.1.0",
-    "react": "~0.12.1"
+    "react": "~0.13.0"
   },
   "license": "MIT"
 }
