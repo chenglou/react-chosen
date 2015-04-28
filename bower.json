@@ -1,6 +1,6 @@
 {
   "name": "react-chosen",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "author": "chenglou <chenglou92@gmail.com>",
   "description": "React wrapper for Chosen jQuery.",
   "main": "react-chosen.js",
@@ -21,9 +21,9 @@
     "wrapper"
   ],
   "dependencies": {
-    "chosen": "~1.1.0",
+    "chosen": "1.4.2",
     "jquery": "~2.1.0",
-    "react": "~0.12.1"
+    "react": "~0.13.0"
   },
   "license": "MIT"
 }
