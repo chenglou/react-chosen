@@ -1,5 +1,7 @@
 # React-chosen
 
+#### This project has been deprecated. Please use [React-select](https://github.com/JedWatson/react-select), a pure React-based solution, instead. Thanks!
+
 [React](http://facebook.github.io/react/) wrapper for [Chosen](http://harvesthq.github.io/chosen/) jQuery.
 
 ## install
