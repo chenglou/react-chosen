@@ -32,6 +32,6 @@
   "dependencies": {
     "drmonty-chosen": "~1.4.2",
     "jquery": "^2.1.1",
-    "react": "^0.13.0"
+    "react": "^0.14.0"
   }
 }

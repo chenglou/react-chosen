@@ -4,7 +4,7 @@
 
     componentDidUpdate: function() {
       // chosen doesn't refresh the options by itself, babysit it
-      $(this.refs.select.getDOMNode()).trigger('chosen:updated');
+      $(this.refs.select).trigger('chosen:updated');
     },
 
     handleChange: function(a, b, c) {
@@ -16,7 +16,7 @@
 
     componentDidMount: function() {
       var props = this.props;
-      var select = $(this.refs.select.getDOMNode());
+      var select = $(this.refs.select);
       $(select)
         .chosen({
           allow_single_deselect: props.allowSingleDeselect,
@@ -39,7 +39,7 @@
     },
 
     componentWillUnmount: function() {
-      $(this.refs.select.getDOMNode()).off('chosen:maxselected change');
+      $(this.refs.select).off('chosen:maxselected change');
     },
 
     render: function() {
