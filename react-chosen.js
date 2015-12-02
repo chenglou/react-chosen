@@ -21,7 +21,9 @@
     handleChange: function(a, b, c) {
       // force the update makes it so that we reset chosen to whatever
       // controlled value the parent dictated
-      this.forceUpdate();
+      if (typeof b !== 'undefined') {
+        this.forceUpdate();
+      }
       this.props.onChange && this.props.onChange(a, b, c);
     },
 
