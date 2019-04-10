@@ -1,19 +1,48 @@
 {
-  "name": "react-chosen",
-  "version": "0.3.8",
+  "_from": "react-chosen",
+  "_id": "react-chosen@0.3.8",
+  "_inBundle": false,
+  "_integrity": "sha1-Jnm/lyXSDY2GNWO0U9FbBu8jt9A=",
+  "_location": "/react-chosen",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-chosen",
+    "name": "react-chosen",
+    "escapedName": "react-chosen",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-chosen/-/react-chosen-0.3.8.tgz",
+  "_shasum": "2679bf9725d20d8d863563b453d15b06ef23b7d0",
+  "_spec": "react-chosen",
+  "_where": "D:\\bonito2",
+  "author": {
+    "name": "chenglou",
+    "email": "chenglou92@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/chenglou/react-chosen/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "create-react-class": "^15.6.3",
+    "drmonty-chosen": "~1.4.2",
+    "jquery": "^3.3.1"
+  },
+  "deprecated": false,
   "description": "React wrapper for Chosen jQuery.",
-  "main": "react-chosen.js",
+  "homepage": "https://github.com/chenglou/react-chosen",
   "ignore": [
     "test",
     "bower_components"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chenglou/react-chosen.git"
-  },
   "keywords": [
     "facebook",
     "react",
@@ -23,15 +52,15 @@
     "dropdown",
     "wrapper"
   ],
-  "author": "chenglou <chenglou92@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chenglou/react-chosen/issues"
+  "main": "react-chosen.js",
+  "name": "react-chosen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenglou/react-chosen.git"
   },
-  "homepage": "https://github.com/chenglou/react-chosen",
-  "dependencies": {
-    "drmonty-chosen": "~1.4.2",
-    "jquery": "^2.1.1",
-    "react": "^0.14.0"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.3.8"
 }
