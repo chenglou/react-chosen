@@ -1,21 +1,14 @@
-(function (root, factory) {
+var createReactClass = require('create-react-class');
+var ReactDOM = require('react-dom');
 
-  if (typeof define === 'function' && define.amd) {
-    define(['react', 'jquery'], factory);
-  } else if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory(require('react'), require('jquery'));
-  } else {
-    root.Chosen = factory(root.React, root.jQuery);
-  }
 
-}(this, function (React, $) {
-
-  var Chosen = React.createClass({
+(function(window, React, $) {
+  var Chosen = createReactClass({
     displayName: 'Chosen',
 
     componentDidUpdate: function() {
       // chosen doesn't refresh the options by itself, babysit it
-      $(this.refs.select).trigger('chosen:updated');
+      $(ReactDOM.findDOMNode(this.refs.select)).trigger('chosen:updated');
     },
 
     handleChange: function(a, b, c) {
@@ -27,11 +20,11 @@
 
     componentDidMount: function() {
       var props = this.props;
-      var select = $(this.refs.select);
+      var select = $(ReactDOM.findDOMNode(this.refs.select));
       $(select)
         .chosen({
           allow_single_deselect: props.allowSingleDeselect,
-          disable_search: props.disableSearch,
+          disable_search: true,
           disable_search_threshold: props.disableSearchThreshold,
           enable_split_word_search: props.enableSplitWordSearch,
           inherit_select_classes: props.inheritSelectClasses,
@@ -50,7 +43,7 @@
     },
 
     componentWillUnmount: function() {
-      $(this.refs.select).off('chosen:maxselected change');
+      $(ReactDOM.findDOMNode(this.refs.select)).off('chosen:maxselected change');
     },
 
     render: function() {
@@ -61,6 +54,20 @@
     }
   });
 
-  return Chosen;
-
-}));
+  if (typeof module === 'undefined') {
+      window.Chosen = Chosen;
+    } else {
+      // If we're dropping plain script tag, then we can assume Chosen and
+      // jQuery are already loaded. For browserify, however, we need to
+      // `require` the chosen npm module, which has the side-effect of attaching
+      // chosen onto jQuery. Note that due to the nature of the third-party
+      // chosen npm shim, we still need to manually include jQuery at the top
+      // level.
+      require('drmonty-chosen');
+      module.exports = Chosen;
+    }
+})(
+  window,
+  typeof require === 'function' ? require('react') : React,
+  jQuery
+);
