@@ -24,7 +24,7 @@ var ReactDOM = require('react-dom');
       $(select)
         .chosen({
           allow_single_deselect: props.allowSingleDeselect,
-          disable_search: true,
+          disable_search: props.disableSearch,
           disable_search_threshold: props.disableSearchThreshold,
           enable_split_word_search: props.enableSplitWordSearch,
           inherit_select_classes: props.inheritSelectClasses,
